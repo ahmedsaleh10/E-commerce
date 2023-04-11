@@ -1,0 +1,21 @@
+.icon{
+    display: inline-block;
+    border: 1px solid black ;
+    border-radius: 50%;
+    background-color: black;
+    padding: 5px;
+}
+
+.iconBorder{
+    display: inline-block;
+    border: 1px solid #828282 ;
+    border-radius: 50%;
+    background-color: #828282;
+    padding: 11px;
+}
+
+.container{
+    width: 300px;
+    text-align: center;
+}
+

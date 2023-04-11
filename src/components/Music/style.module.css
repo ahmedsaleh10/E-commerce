@@ -1,0 +1,12 @@
+.container{
+    margin: 0px 8.4375rem;
+    background-color: rgb(21, 21, 21);
+    padding: 82px 60px ;
+    display:flex ;
+    justify-content: space-between;
+    margin-bottom: 71px;
+}
+
+.info {
+    width: 39%;
+}
