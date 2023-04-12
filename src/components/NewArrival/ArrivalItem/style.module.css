@@ -1,0 +1,17 @@
+
+.headerContent {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    /* color: #FAFAFA; */
+}
+
+.itemInfo {
+    position: absolute;
+    left: 1.5rem;
+    bottom: 1.5rem;
+    width: 100%;
+}
+
