@@ -1,0 +1,22 @@
+.custom-dots li button:before{
+    font-size: 14px;
+    color: white;
+    opacity: 0.6;
+}
+
+.custom-dots li {
+    margin: 0px;
+    margin-right: 0.75rem;
+}
+
+.custom-dots li.slick-active button:before{
+    color: red;
+    font-size: 17px;
+}
+.custom-dots{
+    background-color: black;
+}
+
+.custom-dots{
+    margin: 20px 0px;
+}
