@@ -1,0 +1,9 @@
+footer {
+    background-color: #000;
+    padding-top: 80px ;
+    padding-bottom: 20px;
+    margin-top: 12rem;
+}
+.outlinedButton{
+    border-color: #fff;
+}
