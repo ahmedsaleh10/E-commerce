@@ -1,10 +1,19 @@
 import React from 'react'
-import styles from './style.module.css'
+import { Box } from '@mui/material'
 
 
 const Sectionheader = ({title}) => {
   return (
-    <div className={styles["sectionHeader"]}>{title}</div>
+    <Box sx={{
+      fontFamily: 'Inter, sans-serif',
+      fontStyle: 'normal',
+      fontWeight: '600',
+      fontSize: '2.25rem',
+      letterSpacing:' 0.04em',
+      marginTop: '20px',
+      marginBottom: '60px',
+    }}
+    >{title}</Box>
   )
 }
 
