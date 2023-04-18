@@ -1,14 +1,14 @@
 import React from 'react'
-import styles from "./style.module.css"
+import { Box, Typography } from '@mui/material'
 
 const Subheader = ({title}) => {
   return (
-    <div className={styles["subHeader"]}>
+    <Box sx={{display:'flex', alignItems:'center'}}>
 
-        <div className={styles["subHeaderBorder"]}></div>
-        <span className={styles["subHeaderName"]}>{title}</span>
+        <Box sx={{backgroundColor: '#DB4444', borderRadius: '4px', display: 'inline-block', height: '40px', width: '20px'}}/>
+        <Typography children={title} variant='span' sx={{fontFamily:'Poppins', fontWeight:'600',fontSize:'1rem',lineHeight: '20px' ,color: '#DB4444', marginLeft: '1em'}}/>
 
-    </div>
+    </Box>
     
   )
 }
