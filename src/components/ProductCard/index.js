@@ -9,10 +9,21 @@ import ProductName from "./ProductName";
 import ProductRaing from "./ProductRating";
 import Badge from "./Badge";
 import CardAction from "./CardAction";
+import Options from "./Options";
 
 const ProductCard = (props) => {
 
-  const {isNew , salePercentage ,price,oldPrice,ratingValue,RatingTimes}=props
+
+  // <ProductCard 
+  //       salePercentage={0}
+  //       isNew={true}
+  //       price={120}
+  //       oldPrice={122}
+  //       ratingValue="5"
+  //       RatingTimes="88"
+  //       />
+
+  const {isNew,salePercentage,price,oldPrice,ratingValue,RatingTimes, options}=props
   return (
     <>
       <Card variant="outlined" sx={{ maxWidth: 270 }}>
@@ -32,8 +43,10 @@ const ProductCard = (props) => {
 
         <CardContent>
           <ProductName />
-          <ProductPrice price={price} oldPrice={oldPrice} />
-          <ProductRaing ratingValue={ratingValue} RatingTimes={RatingTimes} />
+          <ProductPrice price={price} oldPrice={oldPrice} options={options} ratingValue={ratingValue} RatingTimes={RatingTimes}/>
+          { !options &&   <ProductRaing ratingValue={ratingValue} RatingTimes={RatingTimes} />}
+
+          { options &&    <Options/>}
         </CardContent>
       </Card>
     </>

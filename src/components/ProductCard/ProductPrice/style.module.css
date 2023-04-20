@@ -10,9 +10,10 @@
 }
 
 .flex{
-    display: flex;
+    /* display: flex; */
     align-items: center;
     gap: 12px;
     margin-top:8px;
     margin-bottom: 8px;
+    /* flex-wrap: wrap; */
 }

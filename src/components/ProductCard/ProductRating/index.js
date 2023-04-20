@@ -20,8 +20,8 @@ const ProductRaing = (props) => {
 
  {  ratingValue &&   <StyledRating
         name="customized-color"
-        defaultValue={2}
-        getLabelText={(value) => `${value} Heart${value !== 1 ? "s" : ""}`}
+        defaultValue={4.5}
+        getLabelText={(ratingValue) => `${ratingValue} Heart${ratingValue !== 1 ? "s" : ""}`}
         precision={0.5}
         icon={<img src="./images/star.png" alt="set star rating"/>}
         emptyIcon={<img src="./images/star-empty.png" alt="empty star" />}
