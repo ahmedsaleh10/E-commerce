@@ -1,0 +1,20 @@
+.background{
+    justify-content: center;
+    height: 270px;
+    display: block;
+    background-color: #F5F5F5;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.productImage{
+    width: 100%;
+    max-width: 172px;
+    height: auto;
+}
+.badgePosition{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}

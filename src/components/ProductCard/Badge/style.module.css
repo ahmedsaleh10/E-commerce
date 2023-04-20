@@ -1,0 +1,19 @@
+.sale{
+    background-color: #DB4444;
+    border-radius: 4px;
+    width: 55px;
+    height: 26px;
+    color: #fff;
+    text-align: center;
+}
+.new{
+    background-color: #00FF66;
+    border-radius: 4px;
+    width: 55px;
+    height: 26px;
+    color: #fff;
+    text-align: center;
+}
+.none{
+display: none;
+}
