@@ -9,8 +9,14 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import BuyingFeatures from "./BuyingFeatures/BuyingFeatures";
+import data from '../../data.js'
+import { useParams } from "react-router-dom";
 
-const ProductDetails = ({ product }) => {
+const ProductDetails = () => {
+  const { productId } = useParams()
+  const singleProduct = data.find(product => product.id === parseInt(productId));
+  const {title , price , description , category , rating:{rate ,count} , image } = singleProduct;
+  console.log(singleProduct)
   const [number, setNumber] = useState(1);
   const [selectedSize, setSelectedSize] = useState("M");
   const sizes = ["XS", "S", "M", "L", "XL"];
@@ -33,25 +39,25 @@ const ProductDetails = ({ product }) => {
     <Box sx={{ margin: "0px 8.4375rem" }}>
 
       <Box sx={{ marginBottom: "5rem" }}>
-        <RoadMap name={product.title} />
+        <RoadMap name={title} />
       </Box>
 
       <Stack flexDirection={"row"} justifyContent={'space-between'}>
         <Stack justifyContent={'space-between'}>
             {photos.map(()=>{
                 return(
-                    <img src={product.image} width={'170px'} height={'140px'} alt={`${product.category}`}/>
+                    <img src={image} width={'170px'} height={'140px'} alt={`${category}`}/>
                 )
             })}
         </Stack>
 
         <Stack justifyContent={'center'} sx={{marginRight:'2.5rem'}}>
-          <img src={product.image} width={"500px"} height={"600px"}alt={`${product.category}`} />
+          <img src={image} width={"500px"} height={"600px"}alt={`${category}`} />
         </Stack>
 
         <Box sx={{width:'400px'}}> 
           <Typography
-            children={product.title}
+            children={title}
             variant="h3"
             sx={{
               fontFamily: "Inter",
@@ -68,12 +74,12 @@ const ProductDetails = ({ product }) => {
           >
             <Rating
               name="read-only"
-              value={product.rating.rate}
+              value={rate}
               readOnly
               sx={{ marginRight: "0.5rem" }}
             />
             <Typography
-              children={`(${product.rating.count} Reviews)`}
+              children={`(${count} Reviews)`}
               variant="span"
               sx={{
                 opacity: "0.5",
@@ -100,12 +106,12 @@ const ProductDetails = ({ product }) => {
             }}
           >
             <AttachMoneyIcon />
-            <Typography variant="span" children={product.price} />
+            <Typography variant="span" children={price} />
           </Stack>
 
           <Typography
             paragraph
-            children={product.description}
+            children={description}
             sx={{
               fontFamily: "Poppins",
               fontSize: "0.9rem",
