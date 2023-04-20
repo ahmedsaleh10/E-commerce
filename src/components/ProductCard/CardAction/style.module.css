@@ -1,0 +1,14 @@
+.CardAction{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.wBG{
+    background-color: #fff;
+}
+.black{
+    color: #000;
+}

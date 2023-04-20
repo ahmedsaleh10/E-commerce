@@ -17,9 +17,8 @@ const ProductRaing = (props) => {
   });
   return (
     <div className={styles.flex}>
-      {/* <Rating name="read-only" value={ratingValue} readOnly precision={0.5} />{" "} */}
 
-      <StyledRating
+ {  ratingValue &&   <StyledRating
         name="customized-color"
         defaultValue={2}
         getLabelText={(value) => `${value} Heart${value !== 1 ? "s" : ""}`}
@@ -27,7 +26,8 @@ const ProductRaing = (props) => {
         icon={<img src="./images/star.png" alt="set star rating"/>}
         emptyIcon={<img src="./images/star-empty.png" alt="empty star" />}
       />
-      <span className={styles.ratingCount}>{`(${RatingTimes})`}</span>
+    }
+    { RatingTimes && <span className={styles.ratingCount}>{`(${RatingTimes})`}</span>}
     </div>
   );
 };

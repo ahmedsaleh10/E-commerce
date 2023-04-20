@@ -5,8 +5,8 @@ const ProductPrice = (props) => {
     const {price,oldPrice}=props
   return (
     <div className={styles.flex}>
-    <span className={styles.price}>${price}</span>
-  {oldPrice &&  <span className={styles.oldPrice}><del>${oldPrice}</del></span>}
+ { price &&  <span className={styles.price}>${price}</span>}
+  {oldPrice &&  <span className={styles.oldPrice}><del>9${oldPrice}</del></span>}
     </div>
   )
 }

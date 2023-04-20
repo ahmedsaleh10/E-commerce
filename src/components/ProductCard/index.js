@@ -8,30 +8,35 @@ import ProductPrice from "./ProductPrice";
 import ProductName from "./ProductName";
 import ProductRaing from "./ProductRating";
 import Badge from "./Badge";
+import CardAction from "./CardAction";
 
-const ProductCard = () => {
+const ProductCard = (props) => {
+
+  const {isNew , salePercentage ,price,oldPrice,ratingValue,RatingTimes}=props
   return (
-    <Card variant="outlined" sx={{ maxWidth: 270 }}>
-      <Box className={styles.background}>
-        <Badge
-          className={styles.badgePosition}
-          isNew={false}
-          salePercentage={14}
-        />
+    <>
+      <Card variant="outlined" sx={{ maxWidth: 270 }}>
+        <Box className={styles.background}>
+          <Badge
+            className={styles.saleBadge}
+            isNew={isNew}
+            salePercentage={salePercentage}
+          />
+          <CardAction />
+          <img
+            className={styles.productImage}
+            src="./images/item.png"
+            alt="product"
+          />
+        </Box>
 
-        <img
-          className={styles.productImage}
-          src="./images/item.png"
-          alt="product"
-        />
-      </Box>
-
-      <CardContent>
-        <ProductName />
-        <ProductPrice price={120} oldPrice={160} />
-        <ProductRaing ratingValue="3.5" RatingTimes="88" />
-      </CardContent>
-    </Card>
+        <CardContent>
+          <ProductName />
+          <ProductPrice price={price} oldPrice={oldPrice} />
+          <ProductRaing ratingValue={ratingValue} RatingTimes={RatingTimes} />
+        </CardContent>
+      </Card>
+    </>
   );
 };
 
