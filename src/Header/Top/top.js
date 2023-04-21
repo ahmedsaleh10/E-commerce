@@ -8,28 +8,30 @@ import IconButton from '@mui/material/IconButton';
 
 function Top() {
     return (
-        <Box  sx={{height: 48,backgroundColor: 'black',color:'#FAFAFA' }} >
-            <Stack direction="row" >
-                <Typography mt={1.2} ml={43}  fontWeight={400} fontSize={14} variant="subtitle1" gutterBottom>
+
+        <Box sx={{backgroundColor:'black'}} >
+            <Box mr={'8.4375rem'} sx={{height: 48,color:'#FAFAFA' }} >
+            <Stack direction="row" justifyContent={'flex-end'} >
+                <Typography mt={1.2} ml={43}  fontWeight={400} fontSize={14} variant="span" >
                     Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
                 </Typography>
 
-                <Typography mt={1.2} ml={1} fontWeight={600} fontSize={14} variant="subtitle1" gutterBottom>
+                <Typography mt={1.2} ml={1} fontWeight={600} fontSize={14} variant="span" >
                     ShopNow
                 </Typography>
 
-                <Typography mt={1.2} ml={23} fontWeight={400} fontSize={14} variant="subtitle1" gutterBottom>
+                <Typography mt={1.2} ml={30} fontWeight={400} fontSize={14} variant="span" >
                     English
                 </Typography>
 
-                <IconButton mt={1.2} ml={0.5} sx={{color:'#FAFAFA'}}>
-                    <KeyboardArrowDownIcon />
+                <IconButton mt={1.2} ml={0.5}  sx={{color:'#FAFAFA',paddingRight:'0px'}}>
+                    <KeyboardArrowDownIcon  />
                     </IconButton>
-
-
             </Stack>
              
         </Box>
+        </Box>
+        
        
     )
 }
