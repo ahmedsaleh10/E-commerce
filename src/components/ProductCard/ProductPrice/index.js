@@ -1,9 +1,7 @@
 import React from "react";
 import styles from "./style.module.css";
-import ProductRaing from "../ProductRating";
 
-const ProductPrice = (props) => {
-  const { price, oldPrice, options ,ratingValue,RatingTimes} = props;
+const ProductPrice = ({ price, oldPrice}) => {
   return (
     <div className={styles.flex}>
       {price && <span className={styles.price}>${price}</span>}
@@ -13,9 +11,7 @@ const ProductPrice = (props) => {
           <del>${oldPrice}</del>
         </span>
       )}
-      {options && (
-        <ProductRaing ratingValue={ratingValue} RatingTimes={RatingTimes} />
-      )}
+      
     </div>
   );
 };
