@@ -1,0 +1,13 @@
+.time {
+    
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    padding: 14px 18px;
+    width: 34px;
+    margin-right: 24px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}

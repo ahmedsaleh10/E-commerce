@@ -239,3 +239,4 @@ export const datatop =[
   label : "English" ,
 },
 ]
+export default data;

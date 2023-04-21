@@ -1,0 +1,12 @@
+*{
+    font-family: 'Poppins';
+}
+.list{
+    margin: 0px;
+    list-style-type: none;
+    
+}
+
+.listItem{
+    padding-bottom: 10px;
+}
