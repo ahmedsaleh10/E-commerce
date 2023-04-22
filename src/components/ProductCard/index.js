@@ -13,7 +13,7 @@ import Options from "./Options";
 const ProductCard = ({product,options,oldPrice,isNew,salePercentage}) => {
   return (
     <>
-      <Card variant="outlined" sx={{ maxWidth: 270 }}>
+      <Card variant="outlined" sx={{ width: 270 }}>
         <Box className={styles.background}>
           <Badge
             className={styles.saleBadge}
