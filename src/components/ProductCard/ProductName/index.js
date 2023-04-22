@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from "./style.module.css"
 
-const ProductName = () => {
+const ProductName = ({name}) => {
   return (
-    <h4 className={styles.productName}>HAVIT HV-96 Gamepad</h4>
+    <h4 className={styles.productName}>{name}</h4>
   )
 }
 

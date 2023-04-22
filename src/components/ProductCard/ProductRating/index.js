@@ -4,23 +4,13 @@ import { styled } from "@mui/material/styles";
 import React from "react";
 import Rating from "@mui/material/Rating";
 
-const ProductRaing = (props) => {
-  const { ratingValue, RatingTimes } = props;
-
-  const StyledRating = styled(Rating)({
-    "& .MuiRating-iconFilled": {
-      color: "#ff6d75",
-    },
-    "& .MuiRating-iconHover": {
-      color: "#ff3d47",
-    },
-  });
+const ProductRating = ({ratingValue,RatingTimes}) => {
   return (
     <div className={styles.flex}>
 
- {  ratingValue &&   <StyledRating
+ {  ratingValue &&   <Rating
         name="customized-color"
-        defaultValue={4.5}
+        value={ratingValue}
         getLabelText={(ratingValue) => `${ratingValue} Heart${ratingValue !== 1 ? "s" : ""}`}
         precision={0.5}
         icon={<img src="./images/star.png" alt="set star rating"/>}
@@ -32,4 +22,4 @@ const ProductRaing = (props) => {
   );
 };
 
-export default ProductRaing;
+export default ProductRating;
