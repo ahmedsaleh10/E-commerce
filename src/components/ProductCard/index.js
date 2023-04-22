@@ -9,11 +9,23 @@ import ProductRating from "./ProductRating";
 import Badge from "./Badge";
 import CardAction from "./CardAction";
 import Options from "./Options";
+import { Button } from "@mui/material";
+import { useState } from "react";
+const ProductCard = ({ product, options, oldPrice, isNew, salePercentage }) => {
+  const [style, setStyle] = useState({ display: "none" });
 
-const ProductCard = ({product,options,oldPrice,isNew,salePercentage}) => {
   return (
     <>
-      <Card variant="outlined" sx={{ width: 270 }}>
+      <Card
+        onMouseOver={(e) => {
+          setStyle({ display: "block" });
+        }}
+        onMouseLeave={(e) => {
+          setStyle({ display: "none" });
+        }}
+        variant="outlined"
+        sx={{ width: 270 }}
+      >
         <Box className={styles.background}>
           <Badge
             className={styles.saleBadge}
@@ -26,13 +38,33 @@ const ProductCard = ({product,options,oldPrice,isNew,salePercentage}) => {
             src={product.image}
             alt="product"
           />
+          <Button
+            style={style}
+            sx={{
+              "&:hover": { color: "white", backgroundColor: "black" },
+              position: "absolute",
+              bottom: "0px",
+              fontFamily: "Poppins",
+              backgroundColor: "black",
+              color: "white",
+              width: "100%",
+            }}
+            children={"Add To Cart"}
+          />
         </Box>
-        
+
         <CardContent>
           <ProductName name={product.title} />
-          <ProductPrice price={product.price} oldPrice={oldPrice} options={options} />
-          <ProductRating ratingValue={product.rating.rate} RatingTimes={product.rating.count} />
-          { options &&    <Options/>}
+          <ProductPrice
+            price={product.price}
+            oldPrice={oldPrice}
+            options={options}
+          />
+          <ProductRating
+            ratingValue={product.rating.rate}
+            RatingTimes={product.rating.count}
+          />
+          {options && <Options />}
         </CardContent>
       </Card>
     </>
