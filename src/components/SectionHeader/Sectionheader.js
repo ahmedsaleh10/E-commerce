@@ -12,6 +12,7 @@ const Sectionheader = ({title}) => {
       letterSpacing:' 0.04em',
       marginTop: '20px',
       marginBottom: '60px',
+      display:'inline-flex'
     }}
     >{title}</Box>
   )
