@@ -246,7 +246,7 @@ const ProductDetails = () => {
 
       <Stack justifyContent={"space-between"} flexDirection={"row"} mt={10}>
         {data
-          .filter((item) => item.category === category)
+          .filter((item) => item.category === category).slice(0,4)
           .map((item, index) => (
             <ProductCard product={item} />
           ))}

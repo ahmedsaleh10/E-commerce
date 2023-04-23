@@ -12,6 +12,9 @@
 .productImage{
     width: 100%;
     max-width: 172px;
+    object-fit: contain;
+    mix-blend-mode:darken;
+    aspect-ratio: 1.5/2;
     height: auto;
 }
 .badgePosition{
