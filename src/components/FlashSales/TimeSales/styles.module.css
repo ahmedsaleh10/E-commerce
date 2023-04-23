@@ -1,0 +1,38 @@
+.TimeBlockList{
+    display: inline-flex;
+    /* justify-content: space-around; */
+    width: 300px;
+}
+
+@media screen and (max-width:800px) {
+    .TimeBlockList{
+        width: 90%;
+        justify-content: space-evenly;
+    }
+}
+.TimeBlockItem{
+    width: 62px;
+    height: 62px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.TimeBlockItem .timeLabel{
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 20px;
+    font-size: 32px;
+    letter-spacing: 0.04em;
+    padding-top: 5px;
+}
+
+.TimeBlockItem .typeLabel{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    line-height: 18px;
+    font-size: 12px;
+}
