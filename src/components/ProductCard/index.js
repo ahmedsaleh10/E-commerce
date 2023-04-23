@@ -11,12 +11,20 @@ import CardAction from "./CardAction";
 import Options from "./Options";
 import { Button } from "@mui/material";
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
+
 const ProductCard = ({ product, options, oldPrice, isNew, salePercentage }) => {
   const [style, setStyle] = useState({ display: "none" });
+  const navigate = useNavigate();
+
+  function handleClick(id) {
+    navigate(`/details/${id}`);
+  }
 
   return (
     <>
       <Card
+      onClick={() => handleClick(product.id)}
         onMouseOver={(e) => {
           setStyle({ display: "block" });
         }}
@@ -24,7 +32,9 @@ const ProductCard = ({ product, options, oldPrice, isNew, salePercentage }) => {
           setStyle({ display: "none" });
         }}
         variant="outlined"
+
         sx={{ width: 270,overflow:'auto' }}
+
       >
         <Box className={styles.background}>
           <Badge
