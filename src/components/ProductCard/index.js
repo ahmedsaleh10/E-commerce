@@ -24,7 +24,7 @@ const ProductCard = ({ product, options, oldPrice, isNew, salePercentage }) => {
           setStyle({ display: "none" });
         }}
         variant="outlined"
-        sx={{ width: 270,height:400,overflow:'auto' }}
+        sx={{ border:'none' ,width: 270,height:400 }}
       >
         <Box className={styles.background}>
           <Badge

@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../Header/header";
+import Header from "../components/Header/header";
 import { Container } from "@mui/material";
 import SliderSection from "../components/SliderSection/SliderSection";
 import Footer from "../components/Footer/Footer";
