@@ -1,17 +1,18 @@
 import React from 'react'
-import Layout from './Layout'
 import {BrowserRouter,Routes,Route} from "react-router-dom"
+import HomePage from './pages/HomePage'
+import NotFoundPage from './pages/NotFoundPage';
 
 
 const Routing = () => {
   return (
     <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Layout/>}>
-                <Route index element={<></>}/>
-                <Route path="/details" element={<></>}/>
-                <Route path="/about" element={<></>}/>
-                <Route path="*" element={<> 404 not found</>}/>
+            <Route path="/" >
+                <Route index path="homepage"element={<HomePage/>}/>
+                <Route path="details" element={<></>}/>
+                <Route path="about" element={<></>}/>
+                <Route path="*" element={<NotFoundPage/>}/>
             </Route>
         </Routes>
   </BrowserRouter>

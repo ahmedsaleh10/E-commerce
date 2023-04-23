@@ -1,5 +1,6 @@
 import { Button, Stack, Typography } from "@mui/material";
 import React from "react";
+import { Link } from '@mui/material';
 
 const NotFound = () => {
   return (
@@ -24,7 +25,7 @@ const NotFound = () => {
         Your visited page not found. You may go home page.
       </Typography>
       <Button
-        children={"Back to home page"}
+        children={ <Link underline="none" href="homepage" color="inherit">Go to homepage</Link>}
         sx={{
           "&:hover": { backgroundColor: "#DB4444" },
           color: "white",
@@ -33,6 +34,8 @@ const NotFound = () => {
           fontFamily: "Poppins",
         }}
       />
+         
+
     </Stack>
   );
 };

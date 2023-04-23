@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Sectionheader from "../SectionHeader/Sectionheader";
 import Subheader from "../SubHeader/Subheader";
-import { Divider, Stack, Paper, Typography } from "@mui/material";
+import { Divider, Stack, Paper, Typography, Container } from "@mui/material";
 import Phone from "./categoriesImages/Category-CellPhone.svg";
 import Watch from "./categoriesImages/Category-SmartWatch.svg";
 import Computers from "./categoriesImages/Category-Computer.svg";
@@ -15,7 +15,7 @@ const Category = () => {
   const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(0);
   const [startIndex, setStartIndex] = useState(0);
   const [endIndex, setEndIndex] = useState(6);
-
+  
   const handleLeftArrowClick = () => {
     if (startIndex > 0) {
       setStartIndex(startIndex - 1);
@@ -95,7 +95,7 @@ const Category = () => {
     setCategories(newCategories);
   };
   return (
-    <>
+    <Container>
       <Divider
         variant="fullWidth"
         sx={{ marginTop: "60px" }}
@@ -154,7 +154,7 @@ const Category = () => {
         orientation="vertical"
         flexItem
       />
-    </>
+    </Container>
   );
 };
 
