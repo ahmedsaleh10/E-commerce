@@ -1,10 +1,10 @@
 import {BrowserRouter,Routes,Route} from "react-router-dom"
-import Header from "./Header/header";
+import Routing from "./Routes";
 
 function App() {
 
   return (
-      <Header />
+      <Routing/>
   );
   // return (
   //   <BrowserRouter>

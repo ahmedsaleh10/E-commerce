@@ -9,53 +9,70 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import BuyingFeatures from "./BuyingFeatures/BuyingFeatures";
-import data from '../../data.js'
+import data from "../../data.js";
 import { useParams } from "react-router-dom";
+import ProductCard from "../ProductCard";
+import Subheader from "../SubHeader/Subheader";
 
 const ProductDetails = () => {
-  const { productId } = useParams()
-  const singleProduct = data.find(product => product.id === parseInt(productId));
-  const {title , price , description , category , rating:{rate ,count} , image } = singleProduct;
-  console.log(singleProduct)
+  const { productId } = useParams();
+  const singleProduct = data.find(
+    (product) => product.id === parseInt(productId)
+  );
+  const {
+    title,
+    price,
+    description,
+    category,
+    rating: { rate, count },
+    image,
+  } = singleProduct;
   const [number, setNumber] = useState(1);
   const [selectedSize, setSelectedSize] = useState("M");
   const sizes = ["XS", "S", "M", "L", "XL"];
-  const photos=[1,2,3,4];
+  const photos = [1, 2, 3, 4];
 
   const handleOnChangeSelectedSize = (value) => {
     setSelectedSize(value);
   };
 
   const handleAddNumber = () => {
-    setNumber(number+1);
+    setNumber(number + 1);
   };
 
   const handleDeleteNumber = () => {
-    setNumber(number-1);
+    setNumber(number - 1);
   };
-  
-  return (
-    
-    <Box sx={{ margin: "0px 8.4375rem" }}>
 
+  return (
+    <Box sx={{ margin: "0px 8.4375rem" }}>
       <Box sx={{ marginBottom: "5rem" }}>
         <RoadMap name={title} />
       </Box>
-
-      <Stack flexDirection={"row"} justifyContent={'space-between'}>
-        <Stack justifyContent={'space-between'}>
-            {photos.map(()=>{
-                return(
-                    <img src={image} width={'170px'} height={'140px'} alt={`${category}`}/>
-                )
-            })}
+      <Stack mb={20}flexDirection={"row"} justifyContent={"space-between"}>
+        <Stack justifyContent={"space-between"}>
+          {photos.map(() => {
+            return (
+              <img
+                src={image}
+                width={"170px"}
+                height={"140px"}
+                alt={`${category}`}
+              />
+            );
+          })}
         </Stack>
 
-        <Stack justifyContent={'center'} sx={{marginRight:'2.5rem'}}>
-          <img src={image} width={"500px"} height={"600px"}alt={`${category}`} />
+        <Stack justifyContent={"center"} sx={{ marginRight: "2.5rem" }}>
+          <img
+            src={image}
+            width={"500px"}
+            height={"600px"}
+            alt={`${category}`}
+          />
         </Stack>
 
-        <Box sx={{width:'400px'}}> 
+        <Box sx={{ width: "400px" }}>
           <Typography
             children={title}
             variant="h3"
@@ -155,7 +172,11 @@ const ProductDetails = () => {
             })}
           </Box>
 
-          <Stack flexDirection={"row"} justifyContent={"space-between"} sx={{paddingBottom:'2.5rem'}}>
+          <Stack
+            flexDirection={"row"}
+            justifyContent={"space-between"}
+            sx={{ paddingBottom: "2.5rem" }}
+          >
             <Stack
               flexDirection={"row"}
               alignItems={"center"}
@@ -172,12 +193,20 @@ const ProductDetails = () => {
                   height: "100%",
                 }}
               />
-              <Typography children={number} sx={{ padding: "0.7rem 2rem",fontSize:'1.2rem',fontFamily:'Poppins',fontWeight:'600' }} />
+              <Typography
+                children={number}
+                sx={{
+                  padding: "0.7rem 2rem",
+                  fontSize: "1.2rem",
+                  fontFamily: "Poppins",
+                  fontWeight: "600",
+                }}
+              />
               <Button
                 onClick={handleAddNumber}
                 children={<AddIcon />}
                 sx={{
-                  "&:hover":{backgroundColor:'#DB4444'},
+                  "&:hover": { backgroundColor: "#DB4444" },
                   color: "white",
                   backgroundColor: "#DB4444",
                   borderRadius: "0px 4px 4px 0px",
@@ -190,11 +219,11 @@ const ProductDetails = () => {
             <Button
               children={"Buy Now"}
               sx={{
-                "&:hover":{backgroundColor:'#DB4444'},
+                "&:hover": { backgroundColor: "#DB4444" },
                 color: "white",
                 backgroundColor: "#DB4444",
                 padding: "0.7rem 3rem",
-                fontFamily:'Poppins' 
+                fontFamily: "Poppins",
               }}
             />
             <Button
@@ -209,14 +238,20 @@ const ProductDetails = () => {
             />
           </Stack>
           <Box>
-            <BuyingFeatures/>
+            <BuyingFeatures />
           </Box>
         </Box>
+      </Stack>
+      <Subheader title="Related Item"  />
 
-        
+      <Stack justifyContent={"space-between"} flexDirection={"row"} mt={10}>
+        {data
+          .filter((item) => item.category === category).slice(0,4)
+          .map((item, index) => (
+            <ProductCard product={item} />
+          ))}
       </Stack>
     </Box>
-    
   );
 };
 
