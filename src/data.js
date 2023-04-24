@@ -206,3 +206,37 @@ const data = [
     rating: { rate: 3.6, count: 145 },
   },
 ];
+
+export const datanav = [
+  {
+      label : 'Home',
+  },
+
+  {
+      label : 'contact',
+  },
+
+  {
+      label : 'About',
+  },
+
+  {
+      label : 'Sign Up',
+  },
+]
+
+
+export const datatop =[
+  {
+      label : "Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!" ,
+  },
+
+  {
+    label : "ShopNow" ,
+},
+
+{
+  label : "English" ,
+},
+]
+export default data;

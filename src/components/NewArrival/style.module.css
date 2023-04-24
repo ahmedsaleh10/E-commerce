@@ -1,0 +1,58 @@
+.container{
+    margin: 0px 8.4375rem;
+}
+
+.newArrival{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: auto auto auto auto;
+    height: 600px;
+    padding-bottom: 130px;
+}
+
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-image: url(images/ps5.png);
+    background-size: cover;
+    object-fit:cover;
+    background-color: black;
+    background-position: center;
+    color: azure;
+    position: relative;
+}
+
+.item2{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    background-image: url(images/women.jpeg);
+    background-size:contain;
+    background-color: #0D0D0D;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    color: azure;
+    position: relative;
+
+}
+
+.item3{
+    background-image: url(images/image.png);
+    background-size: cover;
+    background-color: black;
+    color: azure;
+    position: relative;
+    background-position:center;
+
+}
+
+.item4 {
+    background-image: url(images/perfum.png);
+    background-size: cover;
+    background-color: black;
+    color: azure;
+    position: relative;
+    background-position: center;
+
+}

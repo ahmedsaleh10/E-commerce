@@ -1,0 +1,31 @@
+.background{
+    justify-content: center;
+    height: 270px;
+    display: block;
+    background-color: #F5F5F5;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.productImage{
+    width: 100%;
+    max-width: 172px;
+    object-fit: contain;
+    mix-blend-mode:darken;
+    aspect-ratio: 1.5/2;
+    height: auto;
+}
+.badgePosition{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.saleBadge{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+

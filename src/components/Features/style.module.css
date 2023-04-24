@@ -1,0 +1,5 @@
+.container{
+    margin: 0px 8.4375rem;
+    display: flex;
+    justify-content: space-evenly;
+}

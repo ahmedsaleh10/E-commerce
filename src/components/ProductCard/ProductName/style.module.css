@@ -1,0 +1,9 @@
+.productName{
+    font-family: 'poppins-bold';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    height: 24px;
+    overflow: hidden;
+}

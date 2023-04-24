@@ -1,0 +1,19 @@
+.price{
+    color:#DB4444;
+    font-family: "poppins-s";
+    font-size: 16px;
+}
+.oldPrice{
+    font-family: "poppins-s";
+    color: #727272;
+    font-size: 16px;
+}
+
+.flex{
+    /* display: flex; */
+    align-items: center;
+    gap: 12px;
+    margin-top:8px;
+    margin-bottom: 8px;
+    /* flex-wrap: wrap; */
+}

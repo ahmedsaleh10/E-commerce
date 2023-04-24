@@ -1,0 +1,42 @@
+.swiper-grid-column>.swiper-wrapper{
+    flex-direction: row;
+    row-gap: 4rem;
+}
+.mySwiper{
+    margin-bottom: 2.25rem;
+    overflow: visible;
+    position: relative;
+}
+
+.swiper-button-prev::after,.swiper-button-next::after{
+  content: "" 
+
+}
+.swiper-nav-prev{
+      background-image: url('./images/left.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: -102px;
+      right: 82px;
+      background-color: #F5F5F5;
+      border-radius: 50%;
+      width: 46px;
+      text-align: center;
+      height: 46px;
+      border: none;
+      
+}
+.swiper-nav-next{
+    background-image: url('./images/right.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -102px;
+    right: 28px;
+    background-color: #F5F5F5;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;     
+    border:none
+}
