@@ -42,7 +42,10 @@ const ProductDetails = () => {
   };
 
   const handleDeleteNumber = () => {
-    setNumber(number - 1);
+    {
+      number >0 &&setNumber(number - 1);
+    }
+    
   };
 
   return (
