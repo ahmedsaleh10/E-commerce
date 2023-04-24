@@ -10,6 +10,7 @@ import Subheader from "../SubHeader/Subheader";
 import Sectionheader from "../SectionHeader/Sectionheader";
 import ProductCard from "../ProductCard";
 import data from "../../data";
+import { SwiperNavButtons } from "./SwiperButtons";
 
 const OurProduct = () => {
   return (
@@ -18,11 +19,12 @@ const OurProduct = () => {
       <Sectionheader title={"Explore Our Products"} />
       <Swiper
         slidesPerView={4}
+        loop={true}
         grid={{
           rows: 2,
           
         }}
-        navigation={true}
+        navigation={false}
         
         modules={[Grid, Navigation]}
         className="mySwiper"
@@ -41,7 +43,7 @@ const OurProduct = () => {
             }
        
         </Stack>
-        
+        <SwiperNavButtons/>
       </Swiper>
       <Box textAlign={'center'} >
         <Button sx={{backgroundColor:'#DB4444', padding:'1rem 3rem', color:'white', fontFamily:'Poppins',textTransform:'none',"&:hover":{backgroundColor:'#DB4444',color:'white'}}}>View All Products </Button>
