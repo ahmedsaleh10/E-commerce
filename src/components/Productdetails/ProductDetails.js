@@ -13,6 +13,7 @@ import data from "../../data.js";
 import { useParams } from "react-router-dom";
 import ProductCard from "../ProductCard";
 import Subheader from "../SubHeader/Subheader";
+import styles from "./style.module.css"
 
 const ProductDetails = () => {
   const { productId } = useParams();
@@ -58,6 +59,7 @@ const ProductDetails = () => {
                 width={"170px"}
                 height={"140px"}
                 alt={`${category}`}
+                className={styles.LeftSideImages}
               />
             );
           })}

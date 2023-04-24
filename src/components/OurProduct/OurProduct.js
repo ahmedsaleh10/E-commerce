@@ -43,7 +43,7 @@ const OurProduct = () => {
         </Stack>
         
       </Swiper>
-      <Box textAlign={'center'} mb={"60px"}>
+      <Box textAlign={'center'} >
         <Button sx={{backgroundColor:'#DB4444', padding:'1rem 3rem', color:'white', fontFamily:'Poppins',textTransform:'none',"&:hover":{backgroundColor:'#DB4444',color:'white'}}}>View All Products </Button>
       </Box>
     </Box>

@@ -17,7 +17,7 @@ const HeaderSlider = () => {
   };
     
     return (
-      <Box style={{width:'76.3%', height:'fit-content'}}>
+      <Box style={{width:'76.3%', height:'fit-content',marginTop:"3.2rem"}}>
           <Slider {...settings} >
             
             <SliderContent type={'iPhone 14 Series'} header={'Up to 10% off Voucher'}/> 
