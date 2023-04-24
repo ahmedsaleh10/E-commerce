@@ -2,7 +2,7 @@
 # E-commerce
 
 
-This is a collaborative React project that we built for training, where we converted Figma designs into Reactjs components using Material UI. Our team consisted of four members who worked to develop the app.
+This is a collaborative React project that we built for training, where we converted E-commerce Figma website designs into Reactjs components using Material UI. Our team consisted of four members who worked to develop the app.
 
 ## Prerequisites
 HTML
