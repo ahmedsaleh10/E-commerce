@@ -22,6 +22,21 @@ import { Box } from '@mui/material';
       }));
       
       const AccordionSummary = styled((props) => (
+        <MuiAccordionSummary sx={{minHeight:'30px', paddingLeft:'0px',marginTop:'2.5rem'}}
+          expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
+          {...props}
+        />
+      ))(({ theme }) => ({
+        
+        '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
+          transform: 'rotate(90deg)',
+        },
+        '& .MuiAccordionSummary-content': {
+          margin: '8px 0px'
+        },
+      }));
+
+      const AccordionSummary3 = styled((props) => (
         <MuiAccordionSummary sx={{minHeight:'30px', paddingLeft:'0px'}}
           expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
           {...props}
@@ -59,9 +74,9 @@ const CustomizedAccordions =()=> {
         return (
             <Box sx={{borderRight:'0.5px solid rgb(0,0,0,0.3)', marginRight:'45px' }}>
 
-              <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} >
-                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-                  <Typography sx={{paddingRight:'55px' , fontFamily:'Poppins'}} >Woman’s Fashion</Typography>
+              <Accordion  expanded={expanded === 'panel1'} onChange={handleChange('panel1')} >
+                <AccordionSummary  aria-controls="panel1d-content" id="panel1d-header">
+                  <Typography  sx={{paddingRight:'55px' , fontFamily:'Poppins'}} >Woman’s Fashion</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <ul className={styles['list']}>
@@ -73,9 +88,9 @@ const CustomizedAccordions =()=> {
 
 
               <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-                <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
+                <AccordionSummary3 aria-controls="panel2d-content" id="panel2d-header">
                   <Typography sx={{paddingRight:'55px',fontFamily:'Poppins'}}>Men’s Fashion</Typography>
-                </AccordionSummary>
+                </AccordionSummary3>
                 <AccordionDetails>
                  <ul className={styles['list']}>
                     <li className={styles['listItem']} >Men’s T-shirts</li>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Sectionheader from "../SectionHeader/Sectionheader";
 import Subheader from "../SubHeader/Subheader";
-import { Divider, Stack, Paper, Typography, Container } from "@mui/material";
+import { Divider, Stack, Paper, Typography, Box } from "@mui/material";
 import Phone from "./categoriesImages/Category-CellPhone.svg";
 import Watch from "./categoriesImages/Category-SmartWatch.svg";
 import Computers from "./categoriesImages/Category-Computer.svg";
@@ -95,15 +95,8 @@ const Category = () => {
     setCategories(newCategories);
   };
   return (
-    <Container>
-      <Divider
-        variant="fullWidth"
-        sx={{ marginTop: "60px" }}
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.2)", height: 0.2 }}
-        orientation="vertical"
-        flexItem
-      />
-      <Stack mt={9}>
+    <Box  sx={{padding:'0px',margin:'0px 8.4375rem'}}>
+      <Stack>
         <Subheader title={"Categories"} />
         <Stack
           alignItems="center"
@@ -154,7 +147,7 @@ const Category = () => {
         orientation="vertical"
         flexItem
       />
-    </Container>
+    </Box>
   );
 };
 
