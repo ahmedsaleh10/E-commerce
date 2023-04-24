@@ -26,6 +26,7 @@ const FlashSales = () => {
         slidesPerView={4.5}
         spaceBetween={30}
         navigation={true}
+        loop={true}
         modules={[Navigation]}
         className="mySwiper"
       >
