@@ -16,7 +16,7 @@ const SliderContent = ({type,header,linkto}) => {
             <Typography bool='true' children={header} sx={{fontSize:'3rem', fontFamily:'Inter',lineHeight:'1.25em'  , color:'#FAFAFA', fontWeight:'600', paddingBottom:'0.45em',display:'inline-block',width:'88%' }}/>
             <Link href={linkto} sx={{color:'#FAFAFA',fontFamily:'Poppins', borderBottom:'1px solid #FAFAFA', display:'inline-block'}}> Shop now </Link>
         </Box>
-        <Box sx={{backgroundColor:'black'}}>
+        <Box sx={{backgroundColor:'black',width:'50%'}}>
             <img src='./images/iphone.jpg' height={'100%'}/>
         </Box>
     </Stack>
