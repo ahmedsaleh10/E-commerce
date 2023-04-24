@@ -12,30 +12,31 @@
   content: "" 
 
 }
-.swiper-button-prev{
+.swiper-nav-prev{
       background-image: url('./images/left.png');
       background-position: center;
       background-repeat: no-repeat;
       position: absolute;
-      top: -51px;
-      right: 190px;
-      left: 1069px;
+      top: -102px;
+      right: 82px;
       background-color: #F5F5F5;
       border-radius: 50%;
       width: 46px;
       text-align: center;
       height: 46px;
+      border: none;
       
 }
-.swiper-button-next{
-    /* background-image: url('./images/right.png'); */
+.swiper-nav-next{
+    background-image: url('./images/right.png');
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
-    top: -51px;
-    right: 135px;
+    top: -102px;
+    right: 28px;
     background-color: #F5F5F5;
     border-radius: 50%;
     width: 46px;
     height: 46px;     
+    border:none
 }
