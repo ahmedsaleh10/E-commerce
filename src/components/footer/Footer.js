@@ -26,7 +26,7 @@ const Footer = () => {
   ];
   return (
     <footer>
-      <stack>
+      <div>
         <Grid
           className={style.footer}
           container
@@ -141,8 +141,8 @@ const Footer = () => {
             </Stack>
           </Grid>
         </Grid>
-      </stack>
-      <stack direction="row" spacing={2}>
+      </div>
+      <Stack direction="column" spacing={2}>
         <Divider
           variant="fullWidth"
           sx={{ marginTop: "60px" }}
@@ -172,7 +172,7 @@ const Footer = () => {
           Copyright Rimel 2022. All right reserved
         </Typography></Stack>
 
-      </stack>
+      </Stack>
     </footer>
   );
 };

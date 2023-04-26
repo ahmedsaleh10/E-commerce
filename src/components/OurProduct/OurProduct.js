@@ -34,8 +34,8 @@ const OurProduct = () => {
                 data.map((product,index)=>{
                     return(
                         
-                        <SwiperSlide>
-                        <ProductCard key={index} product={data[index]} options={true&& index>=10}  />
+                        <SwiperSlide key={index}>
+                        <ProductCard  product={data[index]} options={true&& index>=10}  />
                         </SwiperSlide> 
                         
                     )

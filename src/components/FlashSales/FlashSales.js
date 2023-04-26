@@ -32,9 +32,9 @@ const FlashSales = () => {
       >
         {data.map((product, index) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={index}>
               <ProductCard
-                key={index}
+                
                 product={product}
                 salePercentage={3 * (index + 1)}
                 oldPrice={(product.price *(3*(index+1)/100))+product.price}
