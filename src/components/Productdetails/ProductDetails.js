@@ -3,22 +3,20 @@ import React from "react";
 import RoadMap from "./RoadMap/RoadMap";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import RadioCheck from "./RadioCheck/RadioCheck";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import SizeButton from "./SizeButton/SizeButton";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import BuyingFeatures from "./BuyingFeatures/BuyingFeatures";
 import data from "../../data.js";
-import { useParams } from "react-router-dom";
 import ProductCard from "../ProductCard";
 import Subheader from "../SubHeader/Subheader";
 import styles from "./style.module.css"
 
-const ProductDetails = () => {
-  const { productId } = useParams();
+const ProductDetails = ({id}) => {
   const singleProduct = data.find(
-    (product) => product.id === parseInt(productId)
+    (product) => product.id === parseInt(id)
   );
   const {
     title,
@@ -47,7 +45,10 @@ const ProductDetails = () => {
     }
     
   };
-
+  
+  useEffect(() => {
+    window.scrollTo(0,0)
+  },[])
   return (
     <Box sx={{ margin: "0px 8.4375rem" }}>
       <Box sx={{ marginBottom: "5rem" }}>
@@ -55,9 +56,10 @@ const ProductDetails = () => {
       </Box>
       <Stack mb={20}flexDirection={"row"} justifyContent={"space-between"}>
         <Stack justifyContent={"space-between"}>
-          {photos.map(() => {
+          {photos.map((index) => {
             return (
               <img
+                key={index}
                 src={image}
                 width={"170px"}
                 height={"140px"}
@@ -166,9 +168,10 @@ const ProductDetails = () => {
                 paddingRight: "1.5rem",
               }}
             />
-            {sizes.map((size) => {
+            {sizes.map((size,index) => {
               return (
                 <SizeButton
+                  key={index}
                   onClick={handleOnChangeSelectedSize}
                   content={size}
                   selected={size === selectedSize}
@@ -253,7 +256,7 @@ const ProductDetails = () => {
         {data
           .filter((item) => item.category === category).slice(0,4)
           .map((item, index) => (
-            <ProductCard product={item} />
+            <ProductCard key={index} product={item} />
           ))}
       </Stack>
     </Box>

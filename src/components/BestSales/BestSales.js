@@ -30,7 +30,7 @@ const BestSales = () => {
         {data
           .filter((item) => item.rating.rate >4).slice(0,4)
           .map((item, index) => (
-            <ProductCard product={item} />
+            <ProductCard key={index} product={item} />
           ))}
       </Stack>
     </Box>

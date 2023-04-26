@@ -34,6 +34,7 @@ const FlashSales = () => {
           return (
             <SwiperSlide>
               <ProductCard
+                key={index}
                 product={product}
                 salePercentage={3 * (index + 1)}
                 oldPrice={(product.price *(3*(index+1)/100))+product.price}

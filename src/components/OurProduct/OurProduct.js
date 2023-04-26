@@ -35,7 +35,7 @@ const OurProduct = () => {
                     return(
                         
                         <SwiperSlide>
-                        <ProductCard product={data[index]} options={true&& index>=10}  />
+                        <ProductCard key={index} product={data[index]} options={true&& index>=10}  />
                         </SwiperSlide> 
                         
                     )
