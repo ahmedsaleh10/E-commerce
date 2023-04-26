@@ -5,7 +5,7 @@ import AppleIcon from '@mui/icons-material/Apple';
 const SliderContent = ({type,header,linkto}) => {
 
   return (
-    <Stack flexDirection={"row"} sx={ {height:'auto'}} >
+    <Stack flexDirection={"row"} sx={ {height:'auto',backgroundColor:'black'}} >
         <Box sx={{backgroundColor:'black' ,paddingLeft:'4em'}}>
 
             <Stack flexDirection={'row'} alignItems={'center'} sx={{paddingTop:'1.2em'}}>
