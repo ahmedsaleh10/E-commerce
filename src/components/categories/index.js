@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Sectionheader from "../SectionHeader/Sectionheader";
 import Subheader from "../SubHeader/Subheader";
-import { Divider, Stack, Paper, Typography, Box } from "@mui/material";
+import { Divider, Stack, Paper, Typography, Box, Container } from "@mui/material";
 import Phone from "./categoriesImages/Category-CellPhone.svg";
 import Watch from "./categoriesImages/Category-SmartWatch.svg";
 import Computers from "./categoriesImages/Category-Computer.svg";
@@ -15,14 +15,14 @@ const Category = () => {
   const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(0);
   const [startIndex, setStartIndex] = useState(0);
   const [endIndex, setEndIndex] = useState(6);
-  
+
   const handleLeftArrowClick = () => {
     if (startIndex > 0) {
       setStartIndex(startIndex - 1);
       setEndIndex(endIndex - 1);
     }
   };
-  
+
   const handleRightArrowClick = () => {
     if (endIndex < Categories.length - 1) {
       setStartIndex(startIndex + 1);
@@ -71,12 +71,14 @@ const Category = () => {
       icon: Phone,
       title: "Phones",
       selected: false,
-    },    {
+    },
+    {
       id: 7,
       icon: Computers,
       title: "Computers",
       selected: false,
-    },    {
+    },
+    {
       id: 8,
       icon: Watch,
       title: "SmartWatch",
@@ -95,7 +97,7 @@ const Category = () => {
     setCategories(newCategories);
   };
   return (
-    <Box  sx={{padding:'0px',margin:'0px 8.4375rem'}}>
+    <Container  maxWidth="lg" >
       <Stack>
         <Subheader title={"Categories"} />
         <Stack
@@ -109,8 +111,14 @@ const Category = () => {
             <img src={rightArrow} onClick={handleRightArrowClick} />
           </Stack>
         </Stack>
-        <Stack spacing={3.5} direction="row" mt={6}>
-          {Categories.slice(startIndex,endIndex).map((item, index) => (
+        <Stack
+          direction={{ xs: "column", sm: "row" }}
+          alignItems="center"
+          justifyContent="space-between"
+          spacing={{ xs: 1, sm: 2, md: 4 }}
+          mt={6}
+        >
+          {Categories.slice(startIndex, endIndex).map((item, index) => (
             //  <CategoryList key={item.id} data={item} />
 
             <Paper
@@ -147,7 +155,7 @@ const Category = () => {
         orientation="vertical"
         flexItem
       />
-    </Box>
+    </Container>
   );
 };
 
