@@ -9,9 +9,7 @@ const ProductDetailsPage = () => {
   const { productId } = useParams();
   return (
     <>
-      <Header />
       <ProductDetails id={productId} key={productId} />
-      <Footer />
     </>
   );
   
