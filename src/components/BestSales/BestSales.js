@@ -8,7 +8,7 @@ import Grid from "@mui/material/Grid";
 import ProductCard from "../ProductCard";
 const BestSales = () => {
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" >
       <Stack
         mt={10}
         direction="row"
@@ -40,6 +40,7 @@ const BestSales = () => {
         alignItems="center"
         spacing={{ xs: 3, sm: 2, md: 4 }}
         columns={{ xs: 3.5, sm: 7, md: 12 }}
+        mb={18}
       >
         {data
           .filter((item) => item.rating.rate > 4)
