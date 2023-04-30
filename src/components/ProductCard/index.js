@@ -9,32 +9,25 @@ import ProductRating from "./ProductRating";
 import Badge from "./Badge";
 import CardAction from "./CardAction";
 import Options from "./Options";
-import { Button } from "@mui/material";
-import { useState } from "react";
+import { Button, Link } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 
 const ProductCard = ({ product, options, oldPrice, isNew, salePercentage }) => {
-  const [style, setStyle] = useState({ display: "none" });
   const navigate = useNavigate();
 
   function handleClick(id) {
     navigate(`/details/${id}`);
   }
 
+  function handlebutton(){
+    navigate(`/`)
+  }
+
   return (
-    <>
+    <Link className={styles.link} underline="none">
       <Card
-      onClick={() => handleClick(product.id)}
-        onMouseOver={(e) => {
-          setStyle({ display: "block" });
-        }}
-        onMouseLeave={(e) => {
-          setStyle({ display: "none" });
-        }}
         variant="outlined"
-
         sx={{ width: 270,overflow:'auto' }}
-
       >
         <Box className={styles.background}>
           <Badge
@@ -44,12 +37,14 @@ const ProductCard = ({ product, options, oldPrice, isNew, salePercentage }) => {
           />
           <CardAction />
           <img
+            onClick={() => handleClick(product.id)}
             className={styles.productImage}
             src={product.image}
             alt="product"
           />
           <Button
-            style={style}
+            onClick={handlebutton}
+            className={styles.button}
             sx={{
               "&:hover": { color: "white", backgroundColor: "black" },
               position: "absolute",
@@ -58,6 +53,7 @@ const ProductCard = ({ product, options, oldPrice, isNew, salePercentage }) => {
               backgroundColor: "black",
               color: "white",
               width: "100%",
+              display:'none'
             }}
             children={"Add To Cart"}
           />
@@ -77,7 +73,7 @@ const ProductCard = ({ product, options, oldPrice, isNew, salePercentage }) => {
           {options && <Options />}
         </CardContent>
       </Card>
-    </>
+    </Link>
   );
 };
 

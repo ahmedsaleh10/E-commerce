@@ -29,3 +29,7 @@
     left: 12px;
 }
 
+.link:hover .button {
+    display: inline-block;
+}
+
