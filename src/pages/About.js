@@ -3,13 +3,18 @@ import Header from '../components/Header/header'
 import Footer from '../components/footer/Footer'
 import Breadcrumb from '../components/BreadCrumb'
 import Features from '../components/Features/Features'
+import { Container } from '@mui/material';
+import OurTeam from '../components/OurTeam'
 
 const About = () => {
   return (
     <>
         <Header/>
+        <Container>
         <Breadcrumb  path="Home/About"/>
+        <OurTeam/>
         <Features/>
+        </Container>
         <Footer/>
 
     </>

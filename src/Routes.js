@@ -14,6 +14,8 @@ const Routing = () => {
                 <Route path="/details/:productId" element={<ProductDetailsPage/>}/>
                 <Route path="/*" element={<NotFoundPage/>}/>
                 <Route path="/aboutus" element={<About/>} />
+
+              
         </Routes>
   </BrowserRouter>
 
