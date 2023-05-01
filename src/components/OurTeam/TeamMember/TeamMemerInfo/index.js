@@ -9,7 +9,7 @@ const TeamMemerInfo = ({name,job}) => {
     <Typography className={styles.bold} variant="b" >
     {name}
 </Typography>
-<Typography variant="subtitle1" component="h6">
+<Typography  className={styles.sub} variant="subtitle1">
     {job}
 </Typography>
     </>

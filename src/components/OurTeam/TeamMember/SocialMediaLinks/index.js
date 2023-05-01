@@ -5,7 +5,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 
-const SocialMediaLinks = () => {
+const SocialMediaLinks = ({twitter,instagram,linkedin}) => {
 
     const redirectToUrl = (url) => {
         window.open(url, '_blank');
@@ -15,19 +15,19 @@ const SocialMediaLinks = () => {
   return (
     <div>
       <IconButton color="primary" aria-label="add to shopping cart" onClick={()=>{
-        redirectToUrl('https://twitter.com')
+        redirectToUrl(twitter)
       }}>
         <img src="./images/socialmedia/Icon-Twitter.png" alt="twitter" />
       </IconButton>
 
       <IconButton color="primary" aria-label="add to shopping cart" onClick={()=>{
-         redirectToUrl('https://instagram.com')
+         redirectToUrl(instagram)
       }}>
         <img src="./images/socialmedia/icon-instagram.png" alt="instagram" />
       </IconButton>
 
       <IconButton color="primary" aria-label="add to shopping cart" onClick={()=>{
-         redirectToUrl('https://linkedin.com')
+         redirectToUrl(linkedin)
       }}>
         <img src="./images/socialmedia/Icon-Linkedin.png" alt="linkedin" />
       </IconButton>

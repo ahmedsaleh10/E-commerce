@@ -4,12 +4,12 @@ import { Box } from '@mui/material'
 import TeamMemerInfo from './TeamMemerInfo'
 import SocialMediaLinks from './SocialMediaLinks'
 
-const TeamMember = () => {
+const TeamMember = ({name,job,img}) => {
   return (
     <Box className={styles.TeamMember}>
-        <img src="./images/team/1.png" alt='Maher' />
-        <TeamMemerInfo name="Tom Cruise" job="Founder & Chairman" />
-        <SocialMediaLinks facebook="" instagram="" linkedin="" />
+        <img src={`./images/team/${img}`} alt='Maher' />
+        <TeamMemerInfo name={name} job={job} />
+        <SocialMediaLinks twitter={"https://twitter.com"} instagram={'https://instagram.com'} linkedin={"https://linkedin.com"} />
     </Box>
   )
 }
