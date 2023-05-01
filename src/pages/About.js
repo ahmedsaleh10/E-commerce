@@ -5,6 +5,7 @@ import Breadcrumb from '../components/BreadCrumb'
 import Features from '../components/Features/Features'
 import { Container } from '@mui/material';
 import OurTeam from '../components/OurTeam'
+import OurStory from '../components/OurStory'
 
 const About = () => {
   return (
@@ -12,8 +13,9 @@ const About = () => {
         <Header/>
         <Container>
         <Breadcrumb  path="Home/About"/>
-        <OurTeam/>
-        <Features/>
+        <OurStory mt={2}/>
+        <OurTeam mt={4}/>
+        <Features mt={2}/>
         </Container>
         <Footer/>
 

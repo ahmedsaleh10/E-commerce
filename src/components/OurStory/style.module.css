@@ -1,0 +1,31 @@
+.flex {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  width: calc(100% + 180px);
+}
+.p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #000000;
+    }
+.ourStory {
+  width: 50%;
+}
+.storyImage {
+  width: 50%;
+}
+.storyHeader {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 64px;
+  text-align: justify;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+
