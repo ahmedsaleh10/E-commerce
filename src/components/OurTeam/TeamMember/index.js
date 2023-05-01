@@ -6,7 +6,7 @@ import SocialMediaLinks from './SocialMediaLinks'
 
 const TeamMember = ({name,job,img}) => {
   return (
-    <Box className={styles.TeamMember}>
+    <Box  mt={2} className={styles.TeamMember}>
         <img src={`./images/team/${img}`} alt='Maher' />
         <TeamMemerInfo name={name} job={job} />
         <SocialMediaLinks twitter={"https://twitter.com"} instagram={'https://instagram.com'} linkedin={"https://linkedin.com"} />
