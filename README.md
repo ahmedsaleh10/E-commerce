@@ -27,9 +27,14 @@ Git & github
 ## Usage/Examples
 1.Start the development server
 
-
+## Photos
+### Home Page
 ![image](./public/images/HomaPage.png)
+
+### Home Page
 ![image](./public/images/HomaPage1.png)
+
+### Product Page
 ![image](./public/images/ProductsPage.png)
 ```javascript
 npm start
