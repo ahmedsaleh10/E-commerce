@@ -13,7 +13,6 @@ import BestSales from "../components/BestSales/BestSales";
 const HomePage = () => {
   return (
     <>
-      <Header />
       <SliderSection />
       <FlashSales/>
       <Category />
@@ -22,7 +21,6 @@ const HomePage = () => {
       <OurProduct/>
       <NewArrival />
       <Features/>
-      <Footer/>
     </>
   );
 };
