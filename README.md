@@ -28,6 +28,9 @@ Git & github
 1.Start the development server
 
 
+![image](./public/images/HomaPage.png)
+![image](./public/images/HomaPage1.png)
+![image](./public/images/ProductsPage.png)
 ```javascript
 npm start
 
